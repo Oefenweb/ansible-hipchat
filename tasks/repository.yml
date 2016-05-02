@@ -2,8 +2,8 @@
 ---
 - name: add public key
   apt_key:
-    id: CC64091D
-    url: https://atlassian.artifactoryonline.com/atlassian/api/gpg/key/public
+    id: AAD4AA21729B5780
+    url: https://www.hipchat.com/keys/hipchat-linux.key
     state: present
   tags:
     - hipchat-repository-public-key
