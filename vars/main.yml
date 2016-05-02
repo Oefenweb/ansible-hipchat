@@ -1,0 +1,8 @@
+# vars file for hipchat
+---
+hipchat_repositories:
+  - type: deb
+    url: "https://atlassian.artifactoryonline.com/atlassian/hipchat-apt-client {{ ansible_lsb.codename }}"
+    component: main
+hipchat_dependencies:
+  - hipchat4

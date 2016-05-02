@@ -1,0 +1,18 @@
+# tasks file for hipchat
+---
+- name: add public key
+  apt_key:
+    id: CC64091D
+    url: https://atlassian.artifactoryonline.com/atlassian/api/gpg/key/public
+    state: present
+  tags:
+    - hipchat-repository-public-key
+
+- name: add hipchat repository
+  apt_repository:
+    repo: "{{ item.type }} {{ item.url }} {{ item.component }}"
+    state: present
+    update_cache: true
+  with_items: "{{ hipchat_repositories }}"
+  tags:
+    - hipchat-repository-add

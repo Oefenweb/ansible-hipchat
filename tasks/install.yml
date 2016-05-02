@@ -1,0 +1,9 @@
+# tasks file for hipchat
+---
+- name: install dependencies
+  apt:
+    name: "{{ item }}"
+    state: latest
+  with_items: "{{ hipchat_dependencies }}"
+  tags:
+    - hipchat-install-dependencies
