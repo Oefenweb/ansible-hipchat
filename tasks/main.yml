@@ -1,0 +1,13 @@
+# tasks file for hipchat
+---
+- include: repository.yml
+  tags:
+    - configuration
+    - hipchat
+    - hipchat-repository
+
+- include: install.yml
+  tags:
+    - configuration
+    - hipchat
+    - hipchat-install

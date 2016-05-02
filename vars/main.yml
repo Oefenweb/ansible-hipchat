@@ -1,0 +1,9 @@
+# vars file for hipchat
+---
+hipchat_repositories:
+  - type: deb
+    url: "http://downloads.hipchat.com/linux/apt stable"
+    component: main
+
+hipchat_dependencies:
+  - hipchat
