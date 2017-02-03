@@ -2,8 +2,11 @@
 ---
 hipchat_repositories:
   - type: deb
-    url: "http://downloads.hipchat.com/linux/apt stable"
+    url: "https://atlassian.artifactoryonline.com/atlassian/hipchat-apt-client {{ ansible_lsb.codename }}"
     component: main
 
+hipchat_dependencies_pre:
+  - apt-transport-https
+
 hipchat_dependencies:
-  - hipchat
+  - hipchat4

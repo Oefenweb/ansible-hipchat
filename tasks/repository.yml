@@ -1,14 +1,24 @@
 # tasks file for hipchat
 ---
-- name: add public key
+- name: repository | install dependencies (pre)
+  apt:
+    name: "{{ item }}"
+    state: "{{ apt_install_state | default('latest') }}"
+    update_cache: true
+    cache_valid_time: "{{ apt_update_cache_valid_time | default(3600) }}"
+  with_items: "{{ hipchat_dependencies_pre }}"
+  tags:
+    - hipchat-repository-install-dependencies
+
+- name: repository | add public key
   apt_key:
-    id: AAD4AA21729B5780
-    url: https://www.hipchat.com/keys/hipchat-linux.key
+    id: EBA59E53CC64091D
+    url: https://atlassian.artifactoryonline.com/atlassian/api/gpg/key/public
     state: present
   tags:
     - hipchat-repository-public-key
 
-- name: add hipchat repository
+- name: repository | add hipchat repository
   apt_repository:
     repo: "{{ item.type }} {{ item.url }} {{ item.component }}"
     state: present
