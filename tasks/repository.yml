@@ -2,11 +2,10 @@
 ---
 - name: repository | install dependencies (pre)
   apt:
-    name: "{{ item }}"
+    name: "{{ hipchat_dependencies_pre }}"
     state: "{{ apt_install_state | default('latest') }}"
     update_cache: true
     cache_valid_time: "{{ apt_update_cache_valid_time | default(3600) }}"
-  with_items: "{{ hipchat_dependencies_pre }}"
   tags:
     - hipchat-repository-install-dependencies
 
