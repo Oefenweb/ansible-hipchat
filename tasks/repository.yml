@@ -22,6 +22,7 @@
     repo: "{{ item.type }} {{ item.url }} {{ item.component }}"
     state: present
     update_cache: true
+    mode: 0644
   with_items: "{{ hipchat_repositories }}"
   tags:
     - hipchat-repository-add
