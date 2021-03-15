@@ -1,4 +1,4 @@
-# tasks file for hipchat
+# tasks file
 ---
 - name: repository | install dependencies (pre)
   apt:

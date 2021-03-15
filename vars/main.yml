@@ -1,4 +1,4 @@
-# vars file for hipchat
+# vars file
 ---
 hipchat_repositories:
   - type: deb

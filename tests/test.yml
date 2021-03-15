@@ -1,4 +1,4 @@
-# test file for hipchat
+# test file
 ---
 - hosts: localhost
   connection: local

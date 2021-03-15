@@ -1,4 +1,4 @@
-# tasks file for hipchat
+# tasks file
 ---
 - include: repository.yml
   tags:
