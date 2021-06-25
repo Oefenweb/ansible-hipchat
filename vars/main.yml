@@ -2,7 +2,7 @@
 ---
 hipchat_repositories:
   - type: deb
-     # TODO: There's no repo for bionic (yet), use the one from artful instead
+    # TODO: There's no repo for bionic (yet), use the one from artful instead
     url: "https://atlassian.artifactoryonline.com/atlassian/hipchat-apt-client {{ (ansible_distribution == 'Ubuntu' and ansible_distribution_version is version('18.04', '>=')) | ternary('artful', ansible_distribution_release) }}"
     component: main
 
