@@ -5,23 +5,16 @@ role = File.basename(File.expand_path(File.dirname(__FILE__)))
 
 boxes = [
   {
-    :name => "ubuntu-1404",
-    :box => "bento/ubuntu-14.04",
-    :ip => '10.0.0.12',
-    :cpu => "50",
-    :ram => "256"
-  },
-  {
     :name => "ubuntu-1604",
     :box => "bento/ubuntu-16.04",
-    :ip => '10.0.0.13',
+    :ip => '10.0.0.12',
     :cpu => "50",
     :ram => "256"
   },
   {
     :name => "ubuntu-1804",
     :box => "bento/ubuntu-18.04",
-    :ip => '10.0.0.14',
+    :ip => '10.0.0.13',
     :cpu => "50",
     :ram => "384"
   },

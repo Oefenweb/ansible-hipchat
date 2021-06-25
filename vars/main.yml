@@ -7,6 +7,8 @@ hipchat_repositories:
     component: main
 
 hipchat_dependencies_pre:
+  - software-properties-common
+  - dirmngr
   - apt-transport-https
 
 hipchat_dependencies:

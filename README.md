@@ -1,6 +1,6 @@
 ## hipchat
 
-[![Build Status](https://travis-ci.org/Oefenweb/ansible-hipchat.svg?branch=master)](https://travis-ci.org/Oefenweb/ansible-hipchat)
+[![CI](https://github.com/Oefenweb/ansible-hipchat/workflows/CI/badge.svg)](https://github.com/Oefenweb/ansible-hipchat/actions?query=workflow%3ACI)
 [![Ansible Galaxy](http://img.shields.io/badge/ansible--galaxy-hipchat-blue.svg)](https://galaxy.ansible.com/Oefenweb/hipchat/)
 
 Set up [HipChat 4.x](https://www.hipchat.com/) in Debian-like systems.
