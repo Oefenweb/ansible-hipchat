@@ -1,7 +1,7 @@
 # tasks file
 ---
 - name: repository | install dependencies (pre)
-  apt:
+  ansible.builtin.apt:
     name: "{{ hipchat_dependencies_pre }}"
     state: "{{ apt_install_state | default('latest') }}"
     update_cache: true
@@ -10,7 +10,7 @@
     - hipchat-repository-install-dependencies
 
 - name: repository | add public key
-  apt_key:
+  ansible.builtin.apt_key:
     id: EBA59E53CC64091D
     url: https://atlassian.artifactoryonline.com/atlassian/api/gpg/key/public
     state: present
@@ -18,7 +18,7 @@
     - hipchat-repository-public-key
 
 - name: repository | add hipchat repository
-  apt_repository:
+  ansible.builtin.apt_repository:
     repo: "{{ item.type }} {{ item.url }} {{ item.component }}"
     state: present
     update_cache: true
