@@ -23,7 +23,7 @@ None
 ---
 - hosts: all
   roles:
-    - hipchat
+    - oefenweb.hipchat
 ```
 
 #### License
